@@ -9,7 +9,8 @@ public class Job4jDiApplication {
 
 	public static void main(String[] args) {
 		StartUI ui;
-		try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext()) {
+		try (AnnotationConfigApplicationContext context =
+					 new AnnotationConfigApplicationContext()) {
 			context.register(StartUI.class);
 			context.register(ConsoleInput.class);
 			context.register(Store.class);
