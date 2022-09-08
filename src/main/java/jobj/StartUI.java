@@ -1,7 +1,9 @@
 package jobj;
 
 import jobj.di.store.Store;
+import org.springframework.stereotype.Component;
 
+@Component
 public class StartUI {
 
     private final ConsoleInput input;
