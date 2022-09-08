@@ -1,18 +1,17 @@
 package jobj;
 
 import jobj.di.store.Store;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class StartUI {
 
-    private final ConsoleInput input;
-    private final Store store;
+    @Autowired
+    private ConsoleInput input;
+    @Autowired
+    private Store store;
 
-    public StartUI(ConsoleInput input, Store store) {
-        this.input = input;
-        this.store = store;
-    }
 
     public void add(String value) {
         store.add(value);
