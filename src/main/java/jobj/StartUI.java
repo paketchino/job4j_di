@@ -12,7 +12,6 @@ public class StartUI {
     @Autowired
     private Store store;
 
-
     public void add(String value) {
         store.add(value);
     }

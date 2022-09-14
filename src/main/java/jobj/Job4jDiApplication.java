@@ -8,7 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Job4jDiApplication {
 
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		AnnotationConfigApplicationContext context =
+				new AnnotationConfigApplicationContext();
 		context.scan("ru.job4j.di");
 		context.refresh();
 		Store store = context.getBean(Store.class);
