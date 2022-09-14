@@ -8,22 +8,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Job4jDiApplication {
 
 	public static void main(String[] args) {
-		StartUI ui;
-		try (AnnotationConfigApplicationContext context =
-					 new AnnotationConfigApplicationContext()) {
-			context.register(StartUI.class);
-			context.register(ConsoleInput.class);
-			context.register(Store.class);
-
-			context.refresh();
-
-			ui = context.getBean(StartUI.class);
-		}
-		String question = "question";
-		ui.add("Petr Arsentev");
-		ui.add("Ivan ivanov");
-		ui.print();
-		ui.askStr(question);
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		context.scan("ru.job4j.di");
+		context.refresh();
+		Store store = context.getBean(Store.class);
+		store.add("Petr Arsentev");
+		Store another = context.getBean(Store.class);
+		another.getData().forEach(System.out::println);
 	}
 
 }
