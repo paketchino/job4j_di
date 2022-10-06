@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@Scope(scopeName = "prototype")
+@Scope("session")
 public class Store {
 
     private List<String> data = new ArrayList<>();

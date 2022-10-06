@@ -2,9 +2,11 @@ package jobj;
 
 import jobj.di.store.Store;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope
 public class StartUI {
 
     @Autowired
